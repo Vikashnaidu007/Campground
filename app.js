@@ -79,7 +79,8 @@ const styleSrcUrls = [
     "https://fonts.googleapis.com/",
     "https://use.fontawesome.com/",
     "https://cdn.jsdelivr.net",
-    "https://cdn.maptiler.com/", // add this
+    "https://cdn.maptiler.com/", 
+    "'self'"
 ];
 const connectSrcUrls = [
     // "https://api.mapbox.com/",
