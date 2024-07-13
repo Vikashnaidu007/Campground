@@ -1,15 +1,28 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-info">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">AirBnb</a>
+        <a class="navbar-brand" href="#">CG</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/">Home</a>
                 <a class="nav-link" href="/campgrounds">Campgrounds</a>
                 <a class="nav-link" href="/campgrounds/new">New Campground</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!currentUser) { %>
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/register">Sign Up</a>
+                <% } else { %>
+                <a class="nav-link" href="/logout">Logout</a>
+                <% } %>
+                <div class="theme-toggle-container nav-item">
+                    
+                    <label for="theme-toggle"><span class="theme-toggle-text"></span></label>
+                    <img id="theme-toggle" src="/toggle.png" alt="Toggle Theme" class="theme-toggle-img">
+                </div>
             </div>
         </div>
     </div>

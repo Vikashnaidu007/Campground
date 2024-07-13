@@ -1,0 +1,72 @@
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.theme-toggle {
+    display: none;
+}
+
+.theme-toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle-label .theme-toggle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s;
+}
+
+.theme-toggle-label .theme-toggle-switch {
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: transform 0.3s;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.theme-toggle:checked + .theme-toggle-label {
+    background-color: #4CAF50;
+}
+
+.theme-toggle:checked + .theme-toggle-label .theme-toggle-switch {
+    transform: translateX(25px);
+}
+
+.theme-toggle-img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .navbar {
+    background-color: #333333;
+}
+
+body.dark-theme .card {
+    background-color: #444444;
+    color: #ffffff;
+}
